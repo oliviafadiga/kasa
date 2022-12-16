@@ -1,0 +1,36 @@
+.error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 100px 0 20px 0;
+}
+.error p{
+    font-size: 36px;
+    width: 95%;
+    margin: 50px 0;
+}
+.error__home{
+    text-decoration: none;
+    font-size: 18px;
+    color: #FF6060;
+    margin: 100px 0 ;
+}
+.error__home:hover{
+    text-decoration: underline;
+}
+.error img{
+    width: 95%;
+}
+/*--- Version Mobile ---*/
+@media all and (max-width:630px){
+    .error p{
+        font-size: 20px;
+        width: 65%;
+        margin:  0;
+    }
+    .error img{
+        width: 50%;
+    }
+
+}

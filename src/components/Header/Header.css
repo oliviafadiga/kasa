@@ -1,0 +1,46 @@
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2% 0 1% 5%;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    padding: 0;
+}
+nav li{
+    display: block;
+    padding: 0 0 0 80px; 
+       
+}
+li a{
+    cursor: pointer;
+    font-size: 24px;
+    text-decoration: none;
+    color: #FF6060;
+}
+li a:hover{
+    text-decoration: underline;
+}
+.header__logo{
+    height: 68px;
+    width: 210px;
+}
+/*--- Mobile ---*/
+@media all and (max-width:768px){
+    .header__logo{
+        Width : 145px;
+        height: 47px;
+    }
+    li a{
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+    nav{
+        margin-top: 4%;
+    }
+    nav li{
+        padding: 0 10px 0 10px;
+    }}

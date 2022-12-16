@@ -1,0 +1,249 @@
+#house{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.house{
+    width: 90%;
+}
+.house__box{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*--- Info des logements ---*/
+h2{
+    font-weight: 500;
+    font-size: 36px;
+    color: #FF6060;
+    margin: 0;
+}
+p{
+    color: #FF6060;
+    margin: 10px 0 10px 0;
+}
+.house__left{
+    width: 70%;
+    margin: 40px 0 20px 0;
+}
+.house__right{
+    margin: 30px 0 20px 0;
+    text-align: end;
+}
+.house__host{
+    width: 64px;
+    border-radius: 100%;
+}
+.house__name{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.house__name p{
+    width: 46%;
+    line-height: 142.6%;
+    margin: 0 10px 0 0;
+}
+.house__div{
+    height: 100%;
+}
+.house__img{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+.house__location{
+    font-size: 18px;
+}
+.tags{
+    display: flex;
+    align-items: center;
+}
+.tag{
+    color: #F6F6F6;
+    font-size: 14px;
+    padding: 5px 22px;
+    background: #FF6060;
+    border-radius: 10px;
+    min-width: 100px;
+    text-align: center;
+    margin: 10px 10px 10px 0;
+}
+.rating img{
+    margin: 25px 0 0 7px;
+}
+/*--- Fin info logements ---*/
+
+/*--- Carousel ---*/
+.house__carousel{
+    width: 100%;
+    height: 415px;
+}
+.number__styles{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 90%;
+    align-items: flex-end;
+    font-size: 17px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #F6F6F6;
+}
+.slider__styles{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.slide__styles-right{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translatex(100%);
+}
+.slide__styles-hide{
+    transform: translatex(0);
+}
+.slide__styles-left{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translatex(-100%);
+}
+.right{
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.6s;
+    transform: translateX(-100%);
+}
+.left{
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.6s;
+    transform: translateX(100%);
+}
+.slide__styles-one{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+.left__arrow{
+    left: 20px;
+    z-index: 1;
+}
+.right__arrow{
+    right: 20px;
+    z-index: 1;
+}
+/*--- Fin Carousel ---*/
+
+/*--- Dropdown ---*/
+.drop{
+    display: flex;
+    justify-content: space-between;
+}
+.drop__down{
+    width: 47%;
+    margin-bottom: 30px;
+}
+.dropdown__p__array{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: 142.6%;
+    color: #FF6060;
+    padding: 30px 30px 40px 15px;
+    background: #F6F6F6;
+    border-radius: 5px;
+    margin: 0;
+}
+.dropdown__p-array{
+    margin: 0;
+}
+.house__boxes .dropdown__button{
+    border-radius: 10px;
+    padding: 0 15px 0 15px;
+}
+/*--- Fin Dropdown ---*/
+/*--- Mobile ---*/
+@media all and (max-width:768px){
+    #house{
+        margin-top: 30px;
+    }
+    .house__box{
+        flex-direction: column;
+    }
+    .house__left{
+        width: 100%;
+        margin: 15px 0 3px 0;
+    }
+    .house__right{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin-top: 10px;
+    }
+    .house__host{
+        width: 40px;
+    }
+    .house__name p{
+        width: 100%;
+    }
+    h2{
+        font-size: 23px;
+    }
+    p{
+        line-height: 142.6%;
+        font-size: 14px;
+    }
+    .tag{
+        font-size: 12px;
+        border-radius: 5px;
+    }
+    .rating img{
+        width: 20px;
+        margin: 0 5px 0 0;
+    }
+    .house__boxes .dropdown__button{
+        border-radius: 5px;
+    }
+    .drop{
+        flex-direction: column;
+    }
+    .drop__down{
+        width: 100%;
+    }
+    .rating{
+        text-align: left;
+        align-self: center;
+        width: 100%;
+    }
+    .arrow{
+        height: 25px;
+    }
+    .house__carousel{
+        height: 255px;
+    }
+    .slider__styles{
+        border-radius: 10px;
+    }
+    .number__styles{
+        display: none;
+    }
+    .tags{
+        flex-wrap: wrap;
+    }
+}
+/*--- Fin Mobile ---*/
