@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Products from "../../products.json";
+import products from "../../products.json";
 import DropDown from "../../components/Drop/Drop";
 import Rating from "../../components/Rating/Rating";
 import Slider from "../../components/Carousel/Carousel";
@@ -12,7 +12,7 @@ function Logement() {
   //Const UseNavigate permettra de renvoyer sur la page error si l'id est incorrect
   const navigate = useNavigate();
   useEffect(() => {
-    let product = Products.find((product) => params.id === product.id);
+    let product = products.find((product) => params.id === product.id);
     if (!product) {
       navigate("/error");
     }
@@ -21,8 +21,9 @@ function Logement() {
   return (
     <div id="house">
       <div className="house">
-        {Products.filter((product) => product.id === params.id).map(
-          (product, index) => (
+        {products
+          .filter((product) => product.id === params.id)
+          .map((product, index) => (
             <div key={product.id - index} className="house__boxes">
               <div className="house__carousel">
                 <Slider data={product.pictures} />
@@ -65,8 +66,7 @@ function Logement() {
                 </div>
               </div>
             </div>
-          )
-        )}
+          ))}
       </div>
     </div>
   );
