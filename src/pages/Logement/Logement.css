@@ -176,6 +176,9 @@ p{
     border-radius: 10px;
     padding: 0 15px 0 15px;
 }
+.ArrowDown{
+    transform: rotate(3.142rad);
+}
 /*--- Fin Dropdown ---*/
 /*--- Mobile ---*/
 @media all and (max-width:768px){

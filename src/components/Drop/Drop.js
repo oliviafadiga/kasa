@@ -1,7 +1,6 @@
 //import Images et Usestate pourenregistré l'état
 import React, { useState } from "react";
-import ArrowUp from "../../images/ArrowUp.png";
-import ArrowDown from "../../images/ArrowDown.png";
+import arrow from "../../images/ArrowUp.png";
 
 function DropDown({ txt, title, txtArray }) {
   //Récupère la déstructuration: Le tableau contient l'état et la fonction qui permet de modifier l'état
@@ -16,7 +15,7 @@ function DropDown({ txt, title, txtArray }) {
         onClick={() => setIsOpen(false)}
       >
         <span>{title}</span>
-        <img src={ArrowUp} alt="flèche vers le haut" />
+        <img src={arrow} alt="flèche vers le haut" />
       </button>
 
       {
@@ -42,7 +41,7 @@ function DropDown({ txt, title, txtArray }) {
       onClick={() => setIsOpen(true)}
     >
       <span>{title}</span>
-      <img src={ArrowDown} alt="flèche vers le bas" />
+      <img className="ArrowDown" src={arrow} alt="flèche vers le bas" />
     </button>
   );
 }
